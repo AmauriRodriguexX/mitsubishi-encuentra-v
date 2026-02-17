@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias! - Mitsubishi Motors</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    
+    <!-- Google Fonts fallback -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <style>
+        /* Thank You Page Specific Styles */
+        .thank-you-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .thank-you-background {
+            position: absolute;
+            inset: 0;
+            background-image: url('assets/images/hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+        }
+
+        .thank-you-background::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.95) 100%);
+        }
+
+        .thank-you-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 700px;
+            width: 100%;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .thank-you-logo {
+            width: 120px;
+            height: auto;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .thank-you-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 32px;
+            border-radius: 50%;
+            background: rgba(238,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.6s ease-out 0.3s both;
+            position: relative;
+        }
+
+        .thank-you-icon::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border: 2px solid rgba(238,0,0,0.3);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .thank-you-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 16px;
+            font-family: 'MMC_OFFICE', 'Inter', sans-serif;
+            line-height: 1.2;
+        }
+
+        .thank-you-title .text-red {
+            color: #ee0000;
+        }
+
+        .thank-you-subtitle {
+            font-size: 20px;
+            color: #d1d5db;
+            margin-bottom: 40px;
+            font-family: 'MMC_OFFICE', 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        .thank-you-info {
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 40px;
+        }
+
+        .thank-you-info h3 {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 16px;
+            font-family: 'MMC_OFFICE', 'Inter', sans-serif;
+        }
+
+        .thank-you-info p {
+            font-size: 16px;
+            color: #9ca3af;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            font-family: 'MMC_OFFICE', 'Inter', sans-serif;
+        }
+
+        .thank-you-info p:last-child {
+            margin-bottom: 0;
+        }
+
+        .thank-you-cta {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: #ee0000;
+            color: #fff;
+            font-weight: bold;
+            font-size: 14px; /* Cambiado de 16px a 14px */
+            font-family: 'MMC_OFFICE', 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(238,0,0,0.5);
+        }
+
+        .thank-you-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(238,0,0,0.6);
+        }
+
+        @media (max-width: 767px) {
+            .thank-you-title {
+                font-size: 24px; /* Ajustado de 32px a 24px */
+            }
+
+            .thank-you-subtitle {
+                font-size: 16px; /* Ajustado de 16px (ya estaba bien) */
+            }
+
+            .thank-you-info {
+                padding: 24px;
+                text-align: left; /* Alineado a la izquierda en mobile */
+            }
+            
+            .thank-you-info h3 {
+                font-size: 16px; /* Reducido de 18px a 16px en mobile */
+            }
+            
+            .thank-you-info p {
+                font-size: 14px; /* Reducido de 16px a 14px en mobile */
+            }
+
+            .thank-you-logo {
+                width: 64px; /* Reducido de 80px a 64px */
+                margin-bottom: 24px;
+            }
+
+            .thank-you-icon {
+                width: 64px; /* Reducido de 80px a 64px */
+                height: 64px;
+                margin-bottom: 20px; /* Reducido el margen también */
+            }
+            
+            .thank-you-icon svg {
+                width: 32px; /* SVG proporcional al contenedor (64px / 2) */
+                height: 32px;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <!-- Background -->
+        <div class="thank-you-background"></div>
+
+        <!-- Content -->
+        <div class="thank-you-content">
+            <!-- Logo -->
+            <img src="assets/images/logo-mitsubishi.png" alt="Mitsubishi Motors" class="thank-you-logo">
+
+            <!-- Success Icon -->
+            <div class="thank-you-icon">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                    <path d="M12 30L24 42L48 18" stroke="#ee0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <!-- Title -->
+            <h1 class="thank-you-title">
+                ¡Gracias por tu <span class="text-red">interés!</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="thank-you-subtitle">
+                Tu solicitud ha sido recibida correctamente
+            </p>
+
+            <!-- Info Box -->
+            <div class="thank-you-info">
+                <h3>¿Qué sigue ahora?</h3>
+                <p>
+                    ✓ Hemos enviado tu información al distribuidor seleccionado
+                </p>
+                <p>
+                    ✓ Un asesor experto te contactará en menos de 24 horas
+                </p>
+                <p>
+                    ✓ Recibirás una cotización personalizada de tu vehículo
+                </p>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="index.html" class="thank-you-cta">
+                Volver al inicio
+            </a>
+        </div>
+
+        <!-- Particles (reuse from main page) -->
+        <div class="particles-container" id="particlesContainer"></div>
+    </div>
+
+    <script>
+        // Particles effect
+        function initParticles() {
+            const container = document.getElementById('particlesContainer');
+            if (!container) return;
+
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.animationDuration = (3 + Math.random() * 4) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        window.addEventListener('load', function() {
+            initParticles();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsubishi Motors - Encuentra tu vehículo</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    
+    <!-- Google Fonts fallback si no carga MMC_OFFICE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+    <!-- MOBILE LAYOUT -->
+    <div class="mobile-layout">
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="assets/images/logo-mitsubishi.png" alt="Mitsubishi Motors" class="logo">
+        </div>
+
+        <!-- Hero Image Section -->
+        <div class="hero-image-mobile">
+            <div class="gradient-overlay"></div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section-mobile">
+            <div class="form-container">
+                <div class="form-wrapper" id="leadForm">
+                    <!-- Form Header -->
+                    <div class="form-header">
+                        <h2 class="form-title">
+                            Encuentra tu <span class="text-red">Mitsubishi</span>
+                        </h2>
+                        <p class="form-subtitle">
+                            Un asesor experto te contactará en menos de 24 horas
+                        </p>
+                    </div>
+
+                    <!-- Form -->
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <!-- Location & Dealer Selection (UX: primero ubicación y distribuidor) -->
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <select name="estado" id="estado" class="form-select" required>
+                                    <option value=""></option>
+                                    <option value="aguascalientes">Aguascalientes</option>
+                                    <option value="baja-california">Baja California</option>
+                                    <option value="baja-california-sur">Baja California Sur</option>
+                                    <option value="campeche">Campeche</option>
+                                    <option value="chiapas">Chiapas</option>
+                                    <option value="chihuahua">Chihuahua</option>
+                                    <option value="coahuila">Coahuila</option>
+                                    <option value="colima">Colima</option>
+                                    <option value="cdmx">Ciudad de México</option>
+                                    <option value="durango">Durango</option>
+                                    <option value="guanajuato">Guanajuato</option>
+                                    <option value="guerrero">Guerrero</option>
+                                    <option value="hidalgo">Hidalgo</option>
+                                    <option value="jalisco">Jalisco</option>
+                                    <option value="estado-mexico">Estado de México</option>
+                                    <option value="michoacan">Michoacán</option>
+                                    <option value="morelos">Morelos</option>
+                                    <option value="nayarit">Nayarit</option>
+                                    <option value="nuevo-leon">Nuevo León</option>
+                                    <option value="oaxaca">Oaxaca</option>
+                                    <option value="puebla">Puebla</option>
+                                    <option value="queretaro">Querétaro</option>
+                                    <option value="quintana-roo">Quintana Roo</option>
+                                    <option value="san-luis-potosi">San Luis Potosí</option>
+                                    <option value="sinaloa">Sinaloa</option>
+                                    <option value="sonora">Sonora</option>
+                                    <option value="tabasco">Tabasco</option>
+                                    <option value="tamaulipas">Tamaulipas</option>
+                                    <option value="tlaxcala">Tlaxcala</option>
+                                    <option value="veracruz">Veracruz</option>
+                                    <option value="yucatan">Yucatán</option>
+                                    <option value="zacatecas">Zacatecas</option>
+                                </select>
+                                <label for="estado" class="floating-label">ESTADO *</label>
+                                <div class="select-arrow">
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                        <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <select name="distribuidor" id="distribuidor" class="form-select" required>
+                                    <option value=""></option>
+                                    <option value="mitsubishi-polanco">Mitsubishi Polanco</option>
+                                    <option value="mitsubishi-interlomas">Mitsubishi Interlomas</option>
+                                    <option value="mitsubishi-insurgentes">Mitsubishi Insurgentes</option>
+                                    <option value="mitsubishi-satelite">Mitsubishi Satélite</option>
+                                    <option value="mitsubishi-perisur">Mitsubishi Perisur</option>
+                                    <option value="mitsubishi-santa-fe">Mitsubishi Santa Fe</option>
+                                    <option value="mitsubishi-guadalajara">Mitsubishi Guadalajara</option>
+                                    <option value="mitsubishi-monterrey">Mitsubishi Monterrey</option>
+                                    <option value="mitsubishi-puebla">Mitsubishi Puebla</option>
+                                    <option value="mitsubishi-queretaro">Mitsubishi Querétaro</option>
+                                    <option value="mitsubishi-cancun">Mitsubishi Cancún</option>
+                                    <option value="mitsubishi-tijuana">Mitsubishi Tijuana</option>
+                                    <option value="mitsubishi-merida">Mitsubishi Mérida</option>
+                                    <option value="mitsubishi-leon">Mitsubishi León</option>
+                                    <option value="mitsubishi-toluca">Mitsubishi Toluca</option>
+                                    <option value="mitsubishi-cuernavaca">Mitsubishi Cuernavaca</option>
+                                    <option value="mitsubishi-veracruz">Mitsubishi Veracruz</option>
+                                    <option value="mitsubishi-chihuahua">Mitsubishi Chihuahua</option>
+                                </select>
+                                <label for="distribuidor" class="floating-label">DISTRIBUIDOR *</label>
+                                <div class="select-arrow">
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                        <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <!-- Vehicle Selection -->
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <select name="vehiculo" id="vehiculo" class="form-select" required>
+                                    <option value=""></option>
+                                    <option value="outlander">Outlander</option>
+                                    <option value="eclipse-cross">Eclipse Cross</option>
+                                    <option value="asx">ASX</option>
+                                    <option value="l200">L200</option>
+                                    <option value="montero-sport">Montero Sport</option>
+                                    <option value="xpander">Xpander</option>
+                                </select>
+                                <label for="vehiculo" class="floating-label">MODELO *</label>
+                                <div class="select-arrow">
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                        <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <select name="version" id="version" class="form-select" required>
+                                    <option value=""></option>
+                                    <option value="es">ES</option>
+                                    <option value="se">SE</option>
+                                    <option value="sel">SEL</option>
+                                    <option value="limited">Limited</option>
+                                    <option value="gt">GT</option>
+                                </select>
+                                <label for="version" class="floating-label">VERSIÓN *</label>
+                                <div class="select-arrow">
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                        <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <!-- Personal Info -->
+                        <div class="form-group">
+                            <input type="text" name="nombre" id="nombre" class="form-input" required minlength="2">
+                            <label for="nombre" class="floating-label">NOMBRE *</label>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <input type="text" name="apellidoPaterno" id="apellidoPaterno" class="form-input" required>
+                                <label for="apellidoPaterno" class="floating-label">APELLIDO PATERNO *</label>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" name="apellidoMaterno" id="apellidoMaterno" class="form-input" required>
+                                <label for="apellidoMaterno" class="floating-label">APELLIDO MATERNO *</label>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <input type="number" name="edad" id="edad" class="form-input" required min="18" max="100">
+                                <label for="edad" class="floating-label">EDAD *</label>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <select name="genero" id="genero" class="form-select" required>
+                                    <option value=""></option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="femenino">Femenino</option>
+                                </select>
+                                <label for="genero" class="floating-label">GÉNERO *</label>
+                                <div class="select-arrow">
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                        <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <!-- Contact -->
+                        <div class="form-group">
+                            <input type="email" name="correo" id="correo" class="form-input" required>
+                            <label for="correo" class="floating-label">CORREO ELECTRÓNICO *</label>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" name="celular" id="celular" class="form-input" required pattern="[0-9]{10}" maxlength="10">
+                            <label for="celular" class="floating-label">TELÉFONO *</label>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <select name="tiempoCompra" id="tiempoCompra" class="form-select" required>
+                                <option value=""></option>
+                                <option value="0-3-meses">0-3 meses</option>
+                                <option value="3-6-meses">3 a 6 meses</option>
+                                <option value="mas-6-meses">Más de 6 meses</option>
+                                <option value="sin-interes">Sin interés</option>
+                            </select>
+                            <label for="tiempoCompra" class="floating-label">¿CUÁNDO PLANEAS ADQUIRIRLO? *</label>
+                            <div class="select-arrow">
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <!-- Privacy Checkboxes -->
+                        <div class="privacy-section">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="aceptoDatos" id="aceptoDatos" required>
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Acepto el uso de mis datos personales *</span>
+                            </label>
+                            <span class="error-message" id="errorDatos"></span>
+
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="aceptoPrivacidad" id="aceptoPrivacidad" required>
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">
+                                    He leído el <a href="#" class="privacy-link">Aviso de Privacidad</a> *
+                                </span>
+                            </label>
+                            <span class="error-message" id="errorPrivacidad"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text">Quiero mi Mitsubishi</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="btn-arrow">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <div class="success-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M8 20L16 28L32 12" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="success-title">¡Listo!</h3>
+                        <p class="success-text">Nos pondremos en contacto muy pronto</p>
+                    </div>
+                </div>
+
+                <!-- Decorative corners -->
+                <div class="corner-top-right"></div>
+                <div class="corner-bottom-left"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DESKTOP LAYOUT -->
+    <section class="desktop-layout">
+        <!-- Gradient overlay -->
+        <div class="gradient-interactive" id="gradientOverlay"></div>
+
+        <!-- Hero Background -->
+        <div class="hero-background"></div>
+
+        <!-- Floating particles -->
+        <div class="particles-container" id="particlesContainer"></div>
+
+        <!-- Logo Desktop -->
+        <div class="logo-container-desktop">
+            <img src="assets/images/logo-mitsubishi.png" alt="Mitsubishi Motors" class="logo-desktop">
+        </div>
+
+        <!-- Form Desktop -->
+        <div class="form-section-desktop">
+            <div class="form-container-desktop">
+                <div class="form-wrapper" id="leadFormDesktop">
+                    <!-- Form Header -->
+                    <div class="form-header">
+                        <h2 class="form-title">
+                            Encuentra tu <span class="text-red">Mitsubishi</span>
+                        </h2>
+                        <p class="form-subtitle">
+                            Un asesor experto te contactará en menos de 24 horas
+                        </p>
+                    </div>
+
+                    <form class="contact-form desktop-form" novalidate>
+                        <!-- Location & Dealer Selection -->
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <select name="estado" class="form-select" required>
+                                    <option value=""></option>
+                                    <option value="aguascalientes">Aguascalientes</option>
+                                    <option value="baja-california">Baja California</option>
+                                    <option value="baja-california-sur">Baja California Sur</option>
+                                    <option value="campeche">Campeche</option>
+                                    <option value="chiapas">Chiapas</option>
+                                    <option value="chihuahua">Chihuahua</option>
+                                    <option value="coahuila">Coahuila</option>
+                                    <option value="colima">Colima</option>
+                                    <option value="cdmx">Ciudad de México</option>
+                                    <option value="durango">Durango</option>
+                                    <option value="guanajuato">Guanajuato</option>
+                                    <option value="guerrero">Guerrero</option>
+                                    <option value="hidalgo">Hidalgo</option>
+                                    <option value="jalisco">Jalisco</option>
+                                    <option value="estado-mexico">Estado de México</option>
+                                    <option value="michoacan">Michoacán</option>
+                                    <option value="morelos">Morelos</option>
+                                    <option value="nayarit">Nayarit</option>
+                                    <option value="nuevo-leon">Nuevo León</option>
+                                    <option value="oaxaca">Oaxaca</option>
+                                    <option value="puebla">Puebla</option>
+                                    <option value="queretaro">Querétaro</option>
+                                    <option value="quintana-roo">Quintana Roo</option>
+                                    <option value="san-luis-potosi">San Luis Potosí</option>
+                                    <option value="sinaloa">Sinaloa</option>
+                                    <option value="sonora">Sonora</option>
+                                    <option value="tabasco">Tabasco</option>
+                                    <option value="tamaulipas">Tamaulipas</option>
+                                    <option value="tlaxcala">Tlaxcala</option>
+                                    <option value="veracruz">Veracruz</option>
+                                    <option value="yucatan">Yucatán</option>
+                                    <option value="zacatecas">Zacatecas</option>
+                                </select>
+                                <label class="floating-label">ESTADO *</label>
+                                <div class="select-arrow">
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                        <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <select name="distribuidor" class="form-select" required>
+                                    <option value=""></option>
+                                    <option value="mitsubishi-polanco">Mitsubishi Polanco</option>
+                                    <option value="mitsubishi-interlomas">Mitsubishi Interlomas</option>
+                                    <option value="mitsubishi-insurgentes">Mitsubishi Insurgentes</option>
+                                    <option value="mitsubishi-satelite">Mitsubishi Satélite</option>
+                                    <option value="mitsubishi-perisur">Mitsubishi Perisur</option>
+                                    <option value="mitsubishi-santa-fe">Mitsubishi Santa Fe</option>
+                                    <option value="mitsubishi-guadalajara">Mitsubishi Guadalajara</option>
+                                    <option value="mitsubishi-monterrey">Mitsubishi Monterrey</option>
+                                    <option value="mitsubishi-puebla">Mitsubishi Puebla</option>
+                                    <option value="mitsubishi-queretaro">Mitsubishi Querétaro</option>
+                                    <option value="mitsubishi-cancun">Mitsubishi Cancún</option>
+                                    <option value="mitsubishi-tijuana">Mitsubishi Tijuana</option>
+                                    <option value="mitsubishi-merida">Mitsubishi Mérida</option>
+                                    <option value="mitsubishi-leon">Mitsubishi León</option>
+                                    <option value="mitsubishi-toluca">Mitsubishi Toluca</option>
+                                    <option value="mitsubishi-cuernavaca">Mitsubishi Cuernavaca</option>
+                                    <option value="mitsubishi-veracruz">Mitsubishi Veracruz</option>
+                                    <option value="mitsubishi-chihuahua">Mitsubishi Chihuahua</option>
+                                </select>
+                                <label class="floating-label">DISTRIBUIDOR *</label>
+                                <div class="select-arrow">
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                        <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <!-- Vehicle Selection -->
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <select name="vehiculo" class="form-select" required>
+                                    <option value=""></option>
+                                    <option value="outlander">Outlander</option>
+                                    <option value="eclipse-cross">Eclipse Cross</option>
+                                    <option value="asx">ASX</option>
+                                    <option value="l200">L200</option>
+                                    <option value="montero-sport">Montero Sport</option>
+                                    <option value="xpander">Xpander</option>
+                                </select>
+                                <label class="floating-label">MODELO *</label>
+                                <div class="select-arrow">
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                        <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <select name="version" class="form-select" required>
+                                    <option value=""></option>
+                                    <option value="es">ES</option>
+                                    <option value="se">SE</option>
+                                    <option value="sel">SEL</option>
+                                    <option value="limited">Limited</option>
+                                    <option value="gt">GT</option>
+                                </select>
+                                <label class="floating-label">VERSIÓN *</label>
+                                <div class="select-arrow">
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                        <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <!-- Personal Info -->
+                        <div class="form-group">
+                            <input type="text" name="nombre" class="form-input" required minlength="2">
+                            <label class="floating-label">NOMBRE *</label>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <input type="text" name="apellidoPaterno" class="form-input" required>
+                                <label class="floating-label">APELLIDO PATERNO *</label>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" name="apellidoMaterno" class="form-input" required>
+                                <label class="floating-label">APELLIDO MATERNO *</label>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <input type="number" name="edad" class="form-input" required min="18" max="100">
+                                <label class="floating-label">EDAD *</label>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <select name="genero" class="form-select" required>
+                                    <option value=""></option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="femenino">Femenino</option>
+                                </select>
+                                <label class="floating-label">GÉNERO *</label>
+                                <div class="select-arrow">
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                        <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <!-- Contact -->
+                        <div class="form-group">
+                            <input type="email" name="correo" class="form-input" required>
+                            <label class="floating-label">CORREO ELECTRÓNICO *</label>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" name="celular" class="form-input" required pattern="[0-9]{10}" maxlength="10">
+                            <label class="floating-label">TELÉFONO *</label>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <select name="tiempoCompra" class="form-select" required>
+                                <option value=""></option>
+                                <option value="0-3-meses">0-3 meses</option>
+                                <option value="3-6-meses">3 a 6 meses</option>
+                                <option value="mas-6-meses">Más de 6 meses</option>
+                                <option value="sin-interes">Sin interés</option>
+                            </select>
+                            <label class="floating-label">¿CUÁNDO PLANEAS ADQUIRIRLO? *</label>
+                            <div class="select-arrow">
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <!-- Privacy Checkboxes -->
+                        <div class="privacy-section">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="aceptoDatos" required>
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Acepto el uso de mis datos personales *</span>
+                            </label>
+                            <span class="error-message"></span>
+
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="aceptoPrivacidad" required>
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">
+                                    He leído el <a href="#" class="privacy-link">Aviso de Privacidad</a> *
+                                </span>
+                            </label>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Quiero mi Mitsubishi</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="btn-arrow">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="success-message" style="display: none;">
+                        <div class="success-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M8 20L16 28L32 12" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="success-title">¡Listo!</h3>
+                        <p class="success-text">Nos pondremos en contacto muy pronto</p>
+                    </div>
+                </div>
+
+                <!-- Decorative corners -->
+                <div class="corner-top-right"></div>
+                <div class="corner-bottom-left"></div>
+            </div>
+        </div>
+
+        <!-- Decorative corner elements -->
+        <div class="decorative-corner top-right"></div>
+        <div class="decorative-corner bottom-left"></div>
+    </section>
+
+    <!-- Modal Aviso de Privacidad -->
+    <div class="modal-overlay" id="privacyModal">
+        <div class="modal-content">
+            <!-- Header Sticky con Título y Botón Cerrar -->
+            <div class="modal-header">
+                <h2 class="modal-title" style="margin-bottom: 0;">Aviso de Privacidad</h2>
+                <button class="modal-close" id="closeModal" aria-label="Cerrar modal">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L13 13M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Body con Scroll -->
+            <div class="modal-body" style="padding: 32px; max-height: calc(90vh - 90px); overflow-y: auto;">
+                <h3>1. Identidad y Domicilio de Los Responsables</h3>
+                <p>
+                    La <strong>ASOCIACIÓN MEXICANA DE DISTRIBUIDORES MITSUBISHI, A.C.</strong> (con RFC AMD0404226K6) y los Distribuidores Autorizados (en lo sucesivo, en conjunto "Los Responsables"), reconocen la importancia del tratamiento legítimo, controlado e informado de sus datos personales.
+                </p>
+                <p>
+                    En cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP), se pone a su disposición el presente Aviso de Privacidad Integral:
+                </p>
+                <ul>
+                    <li><strong>Domicilio de la ASOCIACIÓN MEXICANA DE DISTRIBUIDORES MITSUBISHI, A.C</strong> (en adelante, la "ASOCIACIÓN") Para Fines de Notificación: Av. Presidente Masaryk 67, Col. Chapultepec Morales, 11570, Miguel Hidalgo, Ciudad de México.</li>
+                    <li><strong>Domicilio de Los Distribuidores (Corresponsables):</strong> El domicilio de la agencia que reciba su solicitud de contacto (lead) será considerado como domicilio de notificación, y puede consultarse en la sección "Contacto" del sitio web del Distribuidor correspondiente.</li>
+                </ul>
+
+                <h3>2. Datos Personales Recabados</h3>
+                <p>
+                    Los Responsables recabarán las siguientes categorías de datos personales, principalmente a través de formularios en el sitio web:
+                </p>
+                <ul>
+                    <li><strong>Datos de Identificación y Contacto:</strong> Nombre completo, domicilio, teléfono fijo, teléfono móvil (incluyendo número de WhatsApp) y correo electrónico.</li>
+                    <li><strong>Datos de Intereses:</strong> Modelo de vehículo, tipo de cotización solicitada (compra, arrendamiento, prueba de manejo), y vehículo actual (en caso de tomarlo a cuenta).</li>
+                    <li><strong>Datos Tecnológicos (Cookies):</strong> Dirección IP, tipo de navegador, tiempo de navegación y datos de seguimiento obtenidos a través de Cookies y Web Beacons.</li>
+                </ul>
+
+                <h3>3. Finalidades del Tratamiento</h3>
+                <p>
+                    Los datos personales serán tratados para las siguientes finalidades:
+                </p>
+                <p><strong>A. Finalidades Primarias (Necesarias para el Servicio):</strong></p>
+                <ol>
+                    <li><strong>Contacto Directo:</strong> Utilizar sus datos de contacto (incluyendo WhatsApp) para responder a su solicitud de información, cotización de un vehículo o agendar una prueba de manejo.</li>
+                    <li><strong>Gestión de Leads:</strong> Transferir sus datos al Distribuidor Autorizado más cercano a su domicilio o de su elección para que inicie y dé seguimiento al proceso de venta y/o cotización.</li>
+                    <li><strong>Seguridad y Fraude:</strong> Utilizar sus datos para prevenir o detectar actos de fraude, phishing o actividades ilegales que puedan poner en riesgo su patrimonio o el de Los Responsables.</li>
+                </ol>
+                <p><strong>B. Finalidades Secundarias (No necesarias para el Servicio):</strong></p>
+                <ol>
+                    <li><strong>Marketing y Publicidad:</strong> Enviar publicidad, promociones, ofertas de vehículos y servicios a través de correo electrónico y/o WhatsApp.</li>
+                    <li><strong>Encuestas y Calidad:</strong> Realizar encuestas de satisfacción, estudios de mercado y medir la calidad del servicio.</li>
+                </ol>
+
+                <h3>4. Negativa al Tratamiento para Finalidades Secundarias</h3>
+                <p>
+                    Usted podrá manifestar su negativa para el tratamiento de sus datos personales respecto a las Finalidades Secundarias enviando un correo a la dirección de Derechos ARCO especificada en la Sección 7.
+                </p>
+
+                <h3>5. Fundamento Legal</h3>
+                <p>
+                    El tratamiento de sus datos personales se fundamenta en los artículos 15, 16 y 37 de la LFPDPPP, y demás legislación aplicable.
+                </p>
+
+                <h3>6. Transferencias de Datos Personales</h3>
+                <p>
+                    Sus datos personales podrán ser transferidos a las siguientes empresas sin necesidad de obtener su consentimiento, en virtud de lo dispuesto en el artículo 37 de la LFPDPPP.
+                </p>
+                
+                <table class="privacy-table">
+                    <thead>
+                        <tr>
+                            <th>Receptor de los Datos</th>
+                            <th>Finalidad de la Transferencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Distribuidores Autorizados</strong></td>
+                            <td>Para la gestión directa de su solicitud de cotización y venta (Finalidad Primaria).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Proveedores Clave</strong><br>(Milestone, Seekop, SugarCRM)</td>
+                            <td>Para el mantenimiento, soporte y gestión de la relación comercial a través de sistemas <strong>CRM</strong> y plataformas de seguimiento de <em>leads</em>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Autoridades</strong></td>
+                            <td>Cuando la transferencia sea obligatoria en cumplimiento de una orden judicial o requerimiento de autoridad competente.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>7. Derechos ARCO y Revocación del Consentimiento</h3>
+                <p>
+                    Usted tiene derecho a <strong>Acceder</strong> a sus datos, <strong>Rectificarlos</strong> si son inexactos o incompletos, <strong>Cancelarlos</strong> cuando considere que no son necesarios para alguna finalidad, u <strong>Oponerse</strong> al tratamiento para fines específicos (Derechos ARCO).
+                </p>
+                <p>
+                    Para ejercer sus Derechos ARCO o revocar su consentimiento, deberá enviar una solicitud por escrito a nuestro Departamento de Datos Personales:
+                </p>
+                <ul>
+                    <li><strong>Área a Cargo:</strong> Marketing</li>
+                    <li><strong>Correo Electrónico:</strong> <a href="mailto:bit@amdim.com.mx" style="color: #ee0000;">bit@amdim.com.mx</a></li>
+                </ul>
+                <p>
+                    Su solicitud será atendida conforme a los plazos y procedimientos establecidos por la LFPDPPP.
+                </p>
+
+                <h3>8. Uso de Cookies, Web Beacons y Otras Tecnologías</h3>
+                <p>
+                    Los sitios web de Los Responsables utilizan tecnologías de rastreo, incluyendo Cookies, Web Beacons y Plataformas de Analítica, para recabar datos tecnológicos (IP, tiempo de navegación, intereses).
+                </p>
+                <p>
+                    Estas herramientas son operadas por terceros como Plataforma de Milestone, Seekop, Meta y Google Analytics, y se utilizan para:
+                </p>
+                <ul>
+                    <li>Medir la efectividad de las campañas publicitarias.</li>
+                    <li>Mejorar la experiencia del usuario y personalizar el contenido.</li>
+                    <li>Cumplir con las Finalidades Secundarias (Marketing).</li>
+                </ul>
+                <p>
+                    Usted puede deshabilitar el uso de Cookies a través de las configuraciones de su navegador.
+                </p>
+
+                <h3>9. Modificaciones al Aviso de Privacidad</h3>
+                <p>
+                    Los Responsables se reservan el derecho de efectuar, en cualquier momento, modificaciones o actualizaciones al presente Aviso de Privacidad para atender novedades legislativas o requerimientos internos. Dichas modificaciones estarán disponibles al público a través de la siguiente dirección: <a href="mailto:informacionamdim@amdim.com.mx" style="color: #ee0000;">informacionamdim@amdim.com.mx</a>
+                </p>
+
+                <p style="margin-top: 32px; font-size: 12px; color: #9ca3af;">
+                    Última actualización: Febrero 2026
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.min.js"></script>
+</body>
+</html>
